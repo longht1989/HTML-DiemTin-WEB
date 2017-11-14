@@ -1,0 +1,169 @@
+/* style for story */
+
+.story {
+    @include clearfix;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: all 0.2s linear !important;
+    &__thumb {
+        overflow: hidden;
+        img {
+            @include transition(all, 0.3, linear);
+        }
+    }
+    &__header {
+        background: white;
+        padding: 8px;
+    }
+    &__footer {
+        border-top: 1px solid #ddd;
+        background: #F6F6F6;
+        padding: 4px 8px;
+        font-size: 12px;
+        line-height: 22px;
+        color: #606060;
+        position: relative;
+        @include clearfix;
+        [class^="icon"] {
+            width: 12px;
+            height: 12px;
+            margin-right: 2px;
+            display: inline-block;
+            vertical-align: text-top;
+            fill: #606060;
+            @include transition(all, 0.2, linear);
+        }
+    }
+    &__title {
+        font-size: 16px;
+        line-height: 1.4em;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    &__meta {
+        font-size: 14px;
+        line-height: 1.4em;
+    }
+    &__source {
+        color: $brand-primary;
+        margin-right: 8px;
+        &:hover {
+            color: $brand-success;
+        }
+    }
+    &__time {
+        color: #999999;
+    }
+    &__tool {
+        cursor: pointer;
+        float: left;
+        &+.story__tool {
+            margin-left: 12px;
+        }
+        &:hover {
+            color: $brand-primary;
+            [class^="icon"] {
+                fill: $brand-primary;
+            }
+            .icon-heart {
+                fill: $brand-success;
+                &+span {
+                    color: #606060;
+                }
+            }
+        }
+        .icon-heart {
+            fill: $brand-success;
+        }
+    }
+    &__trigger {
+        background: transparent;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        transition: all 0.2s linear;
+        margin-left: 8px !important;
+        &:hover,
+        &.is-active {
+            background: #fff;
+        }
+        .icon-dots {
+            margin-right: 0;
+        }
+    }
+    .trigger__menu {
+        display: none;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translate(-70%, 0%);
+        padding: 8px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 3px;
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.21);
+    }
+    &__cluster {
+        float: right;
+        text-align: right;
+        a {
+            display: block;
+            color: $brand-primary;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 170px;
+            overflow: hidden;
+            &:hover {
+                color: $brand-success;
+            }
+            .shuffle-small & {
+                max-width: 100px;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.21);
+        .story__thumb {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .zone & {
+        border: none;
+        border-radius: 0;
+        &:hover {
+            box-shadow: none;
+        }
+        .story__header {
+            padding: 0;
+        }
+    }
+    &--horizontal {
+        &+.story--horizontal {
+            padding-top: 12px;
+            margin-top: 12px;
+            border-top: 1px solid #eee;
+        }
+        .story__thumb {
+            float: left;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+
+        .story__header {
+            overflow: hidden;
+        }
+        .story__title {
+            font-size: 14px;
+            line-height: 1.4em;
+            margin-bottom: 0;
+        }
+        .story__meta {
+            font-size: 12px;
+        }
+    }
+}

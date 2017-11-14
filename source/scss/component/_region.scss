@@ -1,0 +1,47 @@
+/* ====================================
+   All region in project
+   ==================================== */
+
+
+/* zone global style */
+
+.zone {
+    margin-bottom: 24px;
+    background: white;
+    border-radius: 5px;
+    &__header {
+        padding: 8px;
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 1.4em;
+        position: relative;
+        font-weight: bold;
+        color: $brand-primary;
+        &:hover {
+            color: $brand-success;
+            &::after {
+                background: $brand-success;
+            }
+        }
+    }
+    &__content {
+        padding: 8px;
+        @include clearfix();
+    }
+    &--grey {
+        background: #F4F4F4;
+        padding: 8px;
+    }
+    &--featured {
+        background: #111;
+        padding: 16px;
+    }
+}
+
+// ads
+.qc {
+    @include clearfix();
+    margin-bottom: 24px;
+    text-align: center;
+}

@@ -1,0 +1,170 @@
+/* ====================================   Header's style   ==================================== */
+
+#site-header {
+    @include clearfix();
+    margin-bottom: 32px;
+    z-index: 10;
+    position: relative;
+}
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    .logo {
+        float: left;
+        height: 40px;
+        width: auto;
+        img {
+            vertical-align: baseline;
+        }
+    }
+    .search-wrap {
+        width: 796px;
+        margin: 4px 16px 0 266px;
+        float: left;
+    }
+    &__menu {
+        float: right;
+        position: relative;
+        margin-top: 4px;
+        .btn {
+            line-height: 30px;
+            height: 32px;
+            padding: 0 8px;
+            .icon-menu {
+                width: 14px;
+                height: 14px;
+                fill: #333;
+                vertical-align: middle;
+                @include transition(all, 0.2, linear);
+                position: relative;
+                top: -1px;
+                margin-right: 4px;
+            }
+            &.is-active,
+            &:hover{
+                background-color: #f0f0f0;
+                color: #333;
+                border-color: #f0f0f0;
+                .icon-menu {
+                    fill: #333;
+                }
+            }
+        }
+    }
+    .menu__listing {
+        display: none;
+        background: #f0f0f0;
+        border-radius: 3px;
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.21);
+        padding: 4px 0;
+        width: 230px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 16px;
+        li {
+            a {
+                padding: 8px;
+                display: block;
+                transition: background 0.2s linear;
+                &:hover {
+                    background: #e0e0e0;
+                }
+            }
+            &+li {
+                border-top: 1px solid #e6e6e6;
+            }
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #f0f0f0;
+            position: absolute;
+            bottom: 100%;
+            right: 10px;
+        }
+    }
+}
+
+.navigator {
+    @include clearfix();
+    font-size: 15px;
+    line-height: 35px;
+    font-family: $font-family-special;
+    margin-left: -11px;
+    margin-right: -11px;
+    >li {
+        float: left;
+        position: relative;
+        margin-right: 1px;
+        a {
+            display: block;
+            padding: 0 12px;
+            transition: background 0.2s linear, color 0.2s linear;
+            color: white;
+            &:hover {
+                background-color: #eee;
+                color: $brand-primary;
+            }
+            img {
+                position: relative;
+                top: -1px;
+            }
+        }
+        &:hover {
+            .navigator__child {
+                left: auto;
+            }
+            .navigator__search {
+                right: 0;
+            }
+        }
+        &.is-active {
+            a {
+                background-color: #eee;
+                color: $brand-primary;
+            }
+        }
+        &.is-featured {
+            >a {
+                line-height: 29px;
+                margin-top: 3px;
+                margin-bottom: 3px;
+                border-radius: 2px;
+                background: #eee;
+                color: $brand-primary;
+                &:hover {
+                    line-height: 35px;
+                    border-radius: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__child {
+        position: absolute;
+        top: 100%;
+        left: -999em;
+        width: 200px;
+        z-index: 2;
+        @include has-shadow();
+        >li {
+            a {
+                background: #eee;
+                color: $brand-primary !important;
+                &:hover {
+                    background: #ddd;
+                }
+            }
+        }
+    }
+}
+
+// video page Header
