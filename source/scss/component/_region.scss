@@ -37,6 +37,17 @@
         background: #111;
         padding: 16px;
     }
+    &--related {
+        margin-top: 24px;
+        background: none;
+        .zone__header,
+        .zone__content {
+            padding: 0
+        }
+        .zone__header {
+            margin-bottom: 12px;
+        }
+    }
 }
 
 // ads

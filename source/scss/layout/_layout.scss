@@ -35,12 +35,41 @@
             margin: 0 8px 16px;
         }
     }
-    &-small{
-        .story{
+    &-small {
+        .story {
             width: 238px;
         }
     }
 }
+
+//layout topic index
+.topic {
+    &-listing {
+        @include clearfix;
+        margin: 0 -8px 32px;
+        font-size: 0;
+        .topic {
+            width: 196px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 8px;
+        }
+    }
+}
+
+//related story listing
+.zone--related {
+    .story-listing {
+        margin-right: -16px;
+        font-size: 0;
+        .story {
+            width: 222px;
+            float: left;
+            margin-right: 16px;
+        }
+    }
+}
+
 
 &.two-cols {
     @include clearfix;

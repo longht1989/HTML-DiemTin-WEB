@@ -39,8 +39,8 @@ gulp.task('scripts', function() {
             paths.js_dev + '/vendor/jquery.min.js',
             paths.js_dev + '/vendor/jquery-migrate.js',
             paths.js_dev + '/vendor/bootstrap.min.js',
-            paths.js_dev + '/vendor/shuffle.min.js'
-            // paths.js_dev + '/vendor/jquery.matchHeight-min.js',
+            paths.js_dev + '/vendor/shuffle.min.js',
+            paths.js_dev + '/vendor/jquery.matchHeight-min.js'
             // paths.js_dev + '/vendor/jquery.bxslider.js',
             // paths.js_dev + '/vendor/jquery.scrollbar.min.js'
             // end import plugin

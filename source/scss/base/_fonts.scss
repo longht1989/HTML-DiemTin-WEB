@@ -43,3 +43,24 @@
     font-weight: bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('../fonts/SFProText-Medium.eot');
+    src: local('☺'),
+        url('../fonts/SFProText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProText-Medium.woff') format('woff'),
+        url('../fonts/SFProText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('../fonts/SFProText-Semibold.eot');
+    src: local('☺'),
+        url('../fonts/SFProText-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProText-Semibold.woff') format('woff'),
+        url('../fonts/SFProText-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

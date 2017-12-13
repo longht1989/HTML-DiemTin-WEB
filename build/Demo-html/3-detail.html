@@ -33,16 +33,46 @@
                 </svg>
             </div>
             <div class="site-header__menu">
-                <button class="btn btn-border">
+                <a class="btn btn-border">
                     <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="../app_themes/img/sprites.xml#icon-menu"></use>
                     </svg>
                     <span>Chuyên mục</span>
-                </button>
+                </a>
                 <ul class="menu__listing">
-                    <li><a href="2-category.html">Chính trị</a></li>
-                    <li><a href="2-category.html">Thế giới</a></li>
-                    <li><a href="2-category.html">Thể thao</a></li>
+                    <li><a href="2-category.html" title="Gia đình nhà cửa">Gia đình nhà cửa</a></li>
+                    <li><a href="2-category.html" title="Tình yêu hôn nhân">Tình yêu hôn nhân</a></li>
+                    <li><a href="2-category.html" title="Không gian nội thất">Không gian nội thất</a></li>
+                    <li><a href="2-category.html" title="Kinh tế">Kinh tế</a></li>
+                    <li><a href="2-category.html" title="Khởi nghiệp">Khởi nghiệp</a></li>
+                    <li><a href="2-category.html" title="Tài chính">Tài chính</a></li>
+                    <li><a href="2-category.html" title="Bất động sản">Bất động sản</a></li>
+                    <li><a href="2-category.html" title="Giải trí">Giải trí</a></li>
+                    <li><a href="2-category.html" title="Âm nhạc">Âm nhạc</a></li>
+                    <li><a href="2-category.html" title="Thời trang">Thời trang</a></li>
+                    <li><a href="2-category.html" title="Điện ảnh truyền hình">Điện ảnh truyền hình</a></li>
+                    <li><a href="2-category.html" title="Khoa học">Khoa học</a></li>
+                    <li><a href="2-category.html" title="Trò chơi">Trò chơi</a></li>
+                    <li><a href="2-category.html" title="Công nghệ">Công nghệ</a></li>
+                    <li><a href="2-category.html" title="Tự nhiên">Tự nhiên</a></li>
+                    <li><a href="2-category.html" title="Văn hóa">Văn hóa</a></li>
+                    <li><a href="2-category.html" title="Nghệ thuật">Nghệ thuật</a></li>
+                    <li><a href="2-category.html" title="Giáo dục">Giáo dục</a></li>
+                    <li><a href="2-category.html" title="Du lịch">Du lịch</a></li>
+                    <li><a href="2-category.html" title="Thể thao">Thể thao</a></li>
+                    <li><a href="2-category.html" title="Bóng đá">Bóng đá</a></li>
+                    <li><a href="2-category.html" title="Quần vợt">Quần vợt</a></li>
+                    <li><a href="2-category.html" title="Pháp luật">Pháp luật</a></li>
+                    <li><a href="2-category.html" title="Sức khỏe">Sức khỏe</a></li>
+                    <li><a href="2-category.html" title="Ẩm thực">Ẩm thực</a></li>
+                    <li><a href="2-category.html" title="Làm đẹp">Làm đẹp</a></li>
+                    <li><a href="2-category.html" title="Tin thế giới">Tin thế giới</a></li>
+                    <li><a href="2-category.html" title="Xã hội">Xã hội</a></li>
+                    <li><a href="2-category.html" title="Khí hậu môi trường">Khí hậu môi trường</a></li>
+                    <li><a href="2-category.html" title="Giao thông">Giao thông</a></li>
+                    <li><a href="2-category.html" title="Lao động">Lao động</a></li>
+                    <li><a href="2-category.html" title="Quản lý nhà nước">Quản lý nhà nước</a></li>
+                    <li><a href="2-category.html" title="Ô tô xe máy">Ô tô xe máy</a></li>
                 </ul>
             </div>
         </div>
@@ -71,12 +101,12 @@
                         <div class="article__summary">
                             Construction of a giant controversial dam in Laos has been well underway since it began in late 2012. <a href="#">Laos</a> is also set to push ahead with a second hydropower dam on the Mekong River this year in the face of growing concerns among its neighbors.
                         </div>
-                        <div class="article__avatar">
+                        <!-- <div class="article__avatar">
                             <p>
                                 <img src="https://source.unsplash.com/random/636x358?sig=1">
                             </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero natus in molestiae error laborum ab, quam quis quod officia voluptatum?</p>
-                        </div>
+                        </div> -->
                     </header>
                     <div class="article__body">
                         <!-- main content -->
@@ -166,6 +196,21 @@
                                     <span>Chia sẻ</span>
                                 </a>
                             </div>
+                            <div class="article__relate">
+                                <a class="btn btn-primary">
+                                    <svg class="icon-list" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-list"></use>
+                                    </svg>Tin liên quan</a>
+                            </div>
+                            <script type="text/javascript">
+                            $(document).ready(function() {
+                                $(".article__relate .btn").click(function() {
+                                    $('html, body').animate({
+                                        scrollTop: $("#main-article-related").offset().top
+                                    }, 1000);
+                                });
+                            });
+                            </script>
                             <!-- article tag-->
                             <div class="article__tag clearfix">
                                 <h3 class="tag-label">Từ khóa: </h3>
@@ -193,6 +238,188 @@
                     <footer class="article__footer">
                     </footer>
                 </article>
+                <!-- story listing -->
+                <section id="main-article-related" class="zone zone--related">
+                    <div class="zone__header">
+                        <h3 class="zone__title">
+                            <a href="2-category.html">Tin liên quan</a>
+                        </h3>
+                    </div>
+                    <div class="zone__content story-listing">
+                        <article class="story">
+                            <div class="story__thumb"><a href="3-detail.html"><img src="https://source.unsplash.com/random/222x124?sig=0" alt=""></a></div>
+                            <div class="story__header" data-mh="related-story__header">
+                                <h2 class="story__title"><a href="3-detail.html">Neymar trút bỏ nỗi buồn hướng tới trận giao hữu Anh - Brazil</a></h2>
+                                <div class="story__meta">
+                                    <a href="2-category.html" class="story__source">VOV</a>
+                                    <time class="story__time">January 12th, 2011</time>
+                                </div>
+                            </div>
+                            <div class="story__footer">
+                                <div class="story__tool">
+                                    <svg class="icon-heart-outline" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-heart-outline"></use>
+                                    </svg>
+                                    <span>15</span>
+                                </div>
+                                <div class="story__tool">
+                                    <svg class="icon-share" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-share"></use>
+                                    </svg>
+                                    <span>20</span>
+                                </div>
+                                <div class="story__tool story__trigger">
+                                    <svg class="icon-dots" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-dots"></use>
+                                    </svg>
+                                </div>
+                                <ul class="trigger__menu">
+                                    <li>
+                                        <a href="#">
+                                            <svg class="icon-bookmark" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="../app_themes/img/sprites.xml#icon-bookmark"></use>
+                                            </svg>
+                                            <span>Lưu tin</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg class="icon-bookmark" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="../app_themes/img/sprites.xml#icon-bookmark"></use>
+                                            </svg>
+                                            <span>Lưu tin</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg class="icon-bookmark" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="../app_themes/img/sprites.xml#icon-bookmark"></use>
+                                            </svg>
+                                            <span>Lưu tin</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="story">
+                            <div class="story__thumb"><a href="3-detail.html"><img src="https://source.unsplash.com/random/222x124?sig=01" alt=""></a></div>
+                            <div class="story__header" data-mh="related-story__header">
+                                <h2 class="story__title"><a href="3-detail.html">Chủ tịch Trung Quốc rời Hà Nội, kết thúc chuyến thăm Việt Nam</a></h2>
+                                <div class="story__meta">
+                                    <a href="2-category.html" class="story__source">VOV</a>
+                                    <time class="story__time">January 12th, 2011</time>
+                                </div>
+                            </div>
+                            <div class="story__footer">
+                                <div class="story__tool">
+                                    <svg class="icon-heart-outline" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-heart-outline"></use>
+                                    </svg>
+                                    <span>15</span>
+                                </div>
+                                <div class="story__tool">
+                                    <svg class="icon-share" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-share"></use>
+                                    </svg>
+                                    <span>20</span>
+                                </div>
+                                <div class="story__tool story__trigger">
+                                    <svg class="icon-dots" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-dots"></use>
+                                    </svg>
+                                </div>
+                                <ul class="trigger__menu">
+                                    <li>
+                                        <a href="#">
+                                            <svg class="icon-bookmark" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="../app_themes/img/sprites.xml#icon-bookmark"></use>
+                                            </svg>
+                                            <span>Lưu tin</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="story">
+                            <div class="story__thumb"><a href="3-detail.html"><img src="https://source.unsplash.com/random/222x124?sig=02" alt=""></a></div>
+                            <div class="story__header" data-mh="related-story__header">
+                                <h2 class="story__title"><a href="3-detail.html">Xã hội hóa nước sạch cho nông thôn: Còn lắm trắc trở!</a></h2>
+                                <div class="story__meta">
+                                    <a href="2-category.html" class="story__source">VOV</a>
+                                    <time class="story__time">January 12th, 2011</time>
+                                </div>
+                            </div>
+                            <div class="story__footer">
+                                <div class="story__tool">
+                                    <svg class="icon-heart-outline" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-heart-outline"></use>
+                                    </svg>
+                                    <span>15</span>
+                                </div>
+                                <div class="story__tool">
+                                    <svg class="icon-share" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-share"></use>
+                                    </svg>
+                                    <span>20</span>
+                                </div>
+                                <div class="story__tool story__trigger">
+                                    <svg class="icon-dots" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-dots"></use>
+                                    </svg>
+                                </div>
+                                <ul class="trigger__menu">
+                                    <li>
+                                        <a href="#">
+                                            <svg class="icon-bookmark" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="../app_themes/img/sprites.xml#icon-bookmark"></use>
+                                            </svg>
+                                            <span>Lưu tin</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="story">
+                            <div class="story__thumb"><a href="3-detail.html"><img src="https://source.unsplash.com/random/222x124?sig=03" alt=""></a></div>
+                            <div class="story__header" data-mh="related-story__header">
+                                <h2 class="story__title"><a href="3-detail.html">Xúc động lễ tang cụ bà hiến tặng hơn 5.000 lượng vàng</a></h2>
+                                <div class="story__meta">
+                                    <a href="2-category.html" class="story__source">VOV</a>
+                                    <time class="story__time">January 12th, 2011</time>
+                                </div>
+                            </div>
+                            <div class="story__footer">
+                                <div class="story__tool">
+                                    <svg class="icon-heart-outline" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-heart-outline"></use>
+                                    </svg>
+                                    <span>15</span>
+                                </div>
+                                <div class="story__tool">
+                                    <svg class="icon-share" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-share"></use>
+                                    </svg>
+                                    <span>20</span>
+                                </div>
+                                <div class="story__tool story__trigger">
+                                    <svg class="icon-dots" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="../app_themes/img/sprites.xml#icon-dots"></use>
+                                    </svg>
+                                </div>
+                                <ul class="trigger__menu">
+                                    <li>
+                                        <a href="#">
+                                            <svg class="icon-bookmark" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="../app_themes/img/sprites.xml#icon-bookmark"></use>
+                                            </svg>
+                                            <span>Lưu tin</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </div>
             <!-- sidebar col -->
             <div class="sidebar-col">
@@ -257,7 +484,7 @@
             <!-- breadcrumb -->
             <h3 class="breadcrumb"><a href="2-category.html">Tin tức bóng đá</a></h3>
             <!-- story listing with shuffle -->
-            <div class="story-listing shuffle-layout shuffle-small">
+            <div id="same-category" class="story-listing shuffle-layout shuffle-small">
                 <article class="story">
                     <div class="story__thumb"><a href="3-detail.html"><img src="https://source.unsplash.com/random/302x164?sig=0" alt=""></a></div>
                     <div class="story__header">
