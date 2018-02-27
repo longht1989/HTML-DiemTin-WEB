@@ -34,6 +34,18 @@
             width: 302px;
             margin: 0 8px 16px;
         }
+        &.cluster-listing {
+            .card {
+                width: 302px;
+                margin: 0 8px 16px;
+            }
+            .story {
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                width: 100%;
+            }
+        }
     }
     &-small {
         .story {
